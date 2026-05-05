@@ -1,0 +1,123 @@
+:root{
+    --color1:#f0f0f0;
+    --color2:#333333;
+    --color3: #555;
+    --color4: #3ae4b1;
+    --colorLinear: linear-gradient(purple, aqua);
+    --fontFamily: "Cascadia Code", sans-serif;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background: var(--color1);
+    font-family: var(--fontFamily);
+}
+
+/*****************
+ESTILIZANDO O HERO****************/
+
+#inicio{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: var(--color2);
+    opacity:1;
+    transition: opacity 1s ease-in-out;
+}
+
+#imgHero{
+    width: 400px;
+    height: 400px;
+    border-radius: 50%;
+    nargin-top: 20px;
+    animation: efeito 1s ease-in-out;
+}
+
+@keyframes efeito{
+    from{
+        transform:rotate(0deg);
+    }
+    to{
+        transform:rotate(360deg);
+    }
+}
+
+#titulo{
+    margin: 20px;
+    text-align: center;
+    font-size: 3rem;
+    background: var(--colorLinear);
+    text-transform: uppercase;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    animation: efeito 1s ease-in-out;
+}
+
+
+@keyframes efeito{
+    from{
+        opacity:0;
+    }
+    to{
+        opacity:1;
+        transform:translateY(-10px);
+    }
+
+}
+header{
+    background: var(--color3); //cor do fundo
+    color: var(--color4); /*cor da fonte//*/
+    padding: 20px; /*espaçamento interno*/
+    display: flex; 
+    align-items: center; /*alinha os itens verticalmente*/
+    justify-content: space-between;
+    border-radius: 50px; /*bordas arredondadas*/
+}
+header #logo{
+    width: 50px; /*tamanho da logo*/
+    height: 70px; /*manter proporção da imagem*/
+    border-radius: 50%; /*bordas arredondadas*/
+    border-radius: 50px; /*bordas arredondadas*/
+}
+
+header nav ul{
+    display: flex;
+    gap: 20px; /*espaço entre elementos*/
+    list-style: none; /*remove os marcadores da lista*/
+}
+header nav ul li a{
+    text-decoration: none; /*remove sublinhado*/
+    color: var(--color1); /*cor dos links*/
+    font-weight: 800; /*negrito*/
+}
+
+header nav ul li a:hover{
+    color: var(--color4); /*cor dos links ao passar o mouse*/
+    text-decoration: underline; /*sublinhado ao passar o mouse*/
+    text-transform: uppercase; /*transforma o texto em maiúsculo ao passar o mouse*/
+}
+.cor{
+    width: 30px;
+    height: 30px;
+    border-radius: 50px;
+    background: var(--colorLinear);
+}
+#texto{
+    margin: 100px;
+    text-align: center;
+    font-size: 2rem;
+    backgrouund: var(--colorLinear);
+    text-transform: uppercase;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
